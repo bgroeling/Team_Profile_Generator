@@ -1,33 +1,28 @@
+const { writeFile } = require("fs");
+
 // Function that generates markdown for html
 function generateMarkdown(data) {
-    return `
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Team Profile Generator</title>
-    </head>
+  return `
+     <h1> Manager </h1>
+      <ul> 
+        <h2> ${data.Name} </h2>
+        ID: ${data.ID} <br>
+        Email: <a href = "mailto: ${data.Email}"> ${data.Email}</a> <br>
+        Office Number: ${data.OfficeNumber} <br>
+      </ul>
+  `;
+}
 
-    <body>
-    <header>My Team</header>
-      <div>
-          <h1> ${data.Name} </h1>
-          <ul> 
-            <h2> Manager </h2>
-            ID: ${data.ID} <br>
-            Email: <a href = "mailto: ${data.Email}"> ${data.Email}</a> <br>
-            Office Number: ${data.OfficeNumber} <br>
-          </ul>
-      </div>
+function generateMarkdown2(data) {
+  return `
+  
+  `;
+}
 
-      <div>
-
-      </div>
-
-    </body>
-    </html>
+function generateMarkdown3(data) {
+  return `
+  
   `;
 }
   
-module.exports = generateMarkdown;
+module.exports = generateMarkdown, generateMarkdown2,generateMarkdown3;
